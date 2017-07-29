@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.controllers.HelpScreenController">
+    <stylesheets>
+        <URL value="@/graphics/css/helpscreen.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="267.0" layoutY="14.0" text="Help">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="109.0" text="&#9;Ανοίγοντας την εφαρμογή, στο menu στην καρτέλα Θύρα διαλέγουμε την COM που είναι συνδεμένος&#10;ο Arduino. Αυτό το βλεπουμε στο Arduino IDE και στον πίνακα ελέγχου στις συσκευές.&#10;" />
+      <Label layoutX="23.0" layoutY="147.0" text="     Στην καρτέλα Μενού επιλέγουμε την επιλογή Σύνδεση για την εκκίνηση λήψης δεδομένων από τον&#10;Arduino. Με την επιτυχή σύνδεση εμφανίζονται τα δεδομένα των μετρήσεων για τα καιρικά φαινόμενα." />
+      <Pane fx:id="image1_pane" layoutX="45.0" layoutY="293.0" prefHeight="75.0" prefWidth="326.0" />
+      <Pane fx:id="image2_pane" layoutX="468.0" layoutY="289.0" prefHeight="82.0" prefWidth="80.0" />
+   </children>
+</AnchorPane>

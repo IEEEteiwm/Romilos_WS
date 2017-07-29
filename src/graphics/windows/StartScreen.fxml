@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="903.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.controllers.StartScreenController">
+    <stylesheets>
+        <URL value="@/graphics/css/startscreen.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="background" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="903.0">
+         <children>
+            <Label fx:id="lbl_temperature" layoutX="683.0" layoutY="14.0" prefHeight="117.0" prefWidth="177.0" stylesheets="@../css/startscreen.css" text="23,5C">
+               <font>
+                  <Font name="Caviar Dreams" size="54.0" />
+               </font>
+            </Label>
+            <Label id="lblAppTitle" fx:id="lbl_app_title" disable="true" layoutX="335.0" layoutY="23.0" stylesheets="@../css/startscreen.css" text="Meteo Station" visible="false">
+               <font>
+                  <Font name="Caviar Dreams" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_more" layoutX="370.0" layoutY="330.0" text="Περισσότερα στοιχεία">
+               <font>
+                  <Font name="Caviar Dreams Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_humidity_txt" layoutX="393.0" layoutY="388.0" text="Υγρασία:">
+               <font>
+                  <Font name="Caviar Dreams" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_windspeed_txt" layoutX="94.0" layoutY="388.0" text="Ταχύτητα ανέμου:">
+               <font>
+                  <Font name="Caviar Dreams" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_winddir_txt" layoutX="94.0" layoutY="430.0" text="Κατεύθυνση ανέμου:">
+               <font>
+                  <Font name="Caviar Dreams" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_lightlvl_txt" layoutX="653.0" layoutY="388.0" text="Επίπεδο φωτός:">
+               <font>
+                  <Font name="Caviar Dreams" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_presoure_txt" layoutX="644.0" layoutY="430.0" text="Βαρομετρική πίεση:">
+               <font>
+                  <Font name="Caviar Dreams" size="14.0" />
+               </font>
+            </Label>
+            <Line fx:id="shape_line" endX="100.0" layoutX="450.0" layoutY="362.0" startX="-100.0" />
+            <Label fx:id="lbl_time" layoutX="763.0" layoutY="469.0" text="Label">
+               <font>
+                  <Font name="Caviar Dreams" size="23.0" />
+               </font></Label>
+            <Label fx:id="lbl_date" layoutX="624.0" layoutY="469.0" text="Label">
+               <font>
+                  <Font name="Caviar Dreams" size="23.0" />
+               </font></Label>
+            <Label fx:id="lbl_RealFeel" layoutX="691.0" layoutY="113.0" prefHeight="25.0" prefWidth="159.0">
+               <font>
+                  <Font name="Caviar Dreams" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_rainin_txt" layoutX="379.0" layoutY="430.0" text="Βροχόπτωση:">
+               <font>
+                  <Font name="Caviar Dreams" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <MenuBar layoutX="3.0" layoutY="2.0" prefHeight="25.0" prefWidth="898.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Μενού">
+            <items>
+                  <MenuItem fx:id="mnu_connect" mnemonicParsing="false" onAction="#mnu_ConnectAction" text="Σύνδεση" />
+                  <MenuItem fx:id="mnu_Disconnect" mnemonicParsing="false" onAction="#mnu_DisconnectAction" text="Αποσύνδεση" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="mnu_Exit" mnemonicParsing="false" onAction="#mnu_ExitAction" text="Κλείσιμο" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Θύρα">
+            <items>
+                  <RadioMenuItem fx:id="PortCOM1" mnemonicParsing="false" onAction="#COM1_Selected" text="COM1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="PortGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="PortCOM2" mnemonicParsing="false" onAction="#COM2_Selected" text="COM2" toggleGroup="$PortGroup" />
+                  <RadioMenuItem fx:id="PortCOM3" mnemonicParsing="false" onAction="#COM3_Selected" text="COM3" toggleGroup="$PortGroup" />
+                  <RadioMenuItem fx:id="PortCOM4" mnemonicParsing="false" onAction="#COM4_Selected" text="COM4" toggleGroup="$PortGroup" />
+                  <RadioMenuItem fx:id="PortCOM5" mnemonicParsing="false" onAction="#COM5_Selected" text="COM5" toggleGroup="$PortGroup" />
+                  <RadioMenuItem fx:id="PortCOM6" mnemonicParsing="false" onAction="#COM6_Selected" text="COM6" toggleGroup="$PortGroup" />
+                  <RadioMenuItem fx:id="PortCOM7" mnemonicParsing="false" onAction="#COM7_Selected" text="COM7" toggleGroup="$PortGroup" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnu_Help" mnemonicParsing="false" text="Βοήθεια">
+               <items>
+                  <MenuItem fx:id="btnHelp" mnemonicParsing="false" onAction="#btn_help_Action" text="Βοήθεια" />
+                  <MenuItem fx:id="mnu_About" mnemonicParsing="false" onAction="#mnu_AboutAction" text="Σχετικά με..." />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

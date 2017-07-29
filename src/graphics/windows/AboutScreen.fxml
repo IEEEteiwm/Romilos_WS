@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.controllers.AboutScreenController">
+    <stylesheets>
+        <URL value="@/graphics/css/aboutscreen.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="About_Backgroud" prefHeight="432.0" prefWidth="683.0">
+         <children>
+            <Label fx:id="uptime_label" layoutX="14.0" layoutY="367.0" text="Χρόνος Λειτουργείας:" visible="false" />
+            <Button fx:id="btn_Exit" layoutX="581.0" layoutY="367.0" mnemonicParsing="false" onAction="#btn_exit_Action" prefHeight="25.0" prefWidth="88.0" text="Κλείσιμο" />
+            <Label fx:id="window_title" layoutX="267.0" layoutY="14.0" text="About us...">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="main_text" layoutX="7.0" layoutY="56.0" prefHeight="276.0" prefWidth="669.0" />
+            <Label layoutX="34.0" layoutY="332.0" text="Γαβριήλ Μελλίδης">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="332.0" text="Μιχαήλ-Αλ. Σαββανής">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="509.0" layoutY="332.0" text="Χρήστος Χυτήρης">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="78.0" text="     &#9;Αυτή η εφαρμογή έγινε στα πλαίσια ανάπτυξης του μετεορωλογικού σταθμού του ΙΕΕΕ Student &#10;Branch του  Τμήματος Μηχανικών Πληροφορικής, στο ΤΕΙ Δυτικής Μακεδονίας.    Η εφαρμογή είναι&#10;γραμμένη στην γλώσσα Java και είναι ένα μέσο αναπαράστασης των μετρήσεων που πραγματοποι-&#10;εί το υλικό για έναν απλό χρήστη.&#10;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="166.0" text="    &#9;Στην πλατφόρμα υπάρχουν αισθητήρες για τις εξής μονάδες: Θερμοκρασία, φωτεινότητα, ταχύ- &#10;τητα ανέμου, κατεύθυνση ανέμου, υγρασία και βροχόπτωση.">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="220.0" text="    &#9;Ευχαριστούμε το ΕΠΑΛ Καστοριάς για την κατασκευή της βάσης του σταθμού.">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="260.0" text="    &#9;Ο 'Romilos weather station' είναι αφιερωμένος στην μνήμη του Ρωμύλου Μαρμαρά (Arcagelinos),&#10;  μέλος του Branch που απεβίωσε στις 13 Σεπτεμβρίου 2014.">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
